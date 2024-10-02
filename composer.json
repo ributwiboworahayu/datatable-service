@@ -1,0 +1,21 @@
+{
+  "name": "ributwiboworahayu/datatable-service",
+  "description": "A service for integrating DataTables with Laravel.",
+  "license": "MIT",
+  "require": {
+    "php": "^7.4|^8.0|^8.1|^8.2",
+    "illuminate/http": "^10.0||^11.0"
+  },
+  "require-dev": {
+    "laravel/pint": "^1.14",
+    "orchestra/testbench": "^9.0.0||^8.22.0",
+    "pestphp/pest": "^2.34"
+  },
+  "autoload": {
+    "psr-4": {
+      "DatatableService\\": "src"
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
