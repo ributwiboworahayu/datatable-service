@@ -49,7 +49,7 @@ class ExampleController extends Controller
     public function index(Request $request)
     {
         $query = YourModel::query(); // Replace with your model
-        $columns = ['column1', 'column2']; // Replace with relevant columns
+        $columns = ['tableName.column1', 'tableName.column2']; // Replace with relevant columns
 
         // Using applyDataTables to get DataTables response
         $dataTablesResponse = $this->dataTableService->applyDataTables($query, $request, $columns);
@@ -189,7 +189,7 @@ class ExampleController extends Controller
     public function index(Request $request)
     {
         $query = YourModel::query(); // Ganti dengan model Anda
-        $columns = ['column1', 'column2']; // Ganti dengan kolom yang relevan
+        $columns = ['tableName.column1', 'tableName.column2']; // Ganti dengan kolom yang relevan
 
         // Menggunakan applyDataTables untuk mendapatkan response DataTables
         $dataTablesResponse = $this->dataTableService->applyDataTables($query, $request, $columns);
@@ -260,14 +260,6 @@ $(document).ready(function() {
 
 </body>
 </html>
-```
-
-## Pengaturan
-
-Jika Anda memiliki pengaturan default, Anda dapat menambahkannya dalam file konfigurasi `config/datatable.php`. Pastikan untuk menerbitkan file konfigurasi jika perlu.
-
-```bash
-php artisan vendor:publish --provider="DatatableService\DataTableServiceProvider"
 ```
 
 ## Kesimpulan
