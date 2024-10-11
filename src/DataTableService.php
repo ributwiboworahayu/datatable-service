@@ -56,6 +56,17 @@ class DataTableService
                 });
             }
 
+            // Terapkan filter pencarian per kolom
+            foreach ($columns as $index => $column) {
+                // Ambil nilai pencarian kolom tertentu dari request DataTables
+                $columnSearchValue = $request->input("columns.$index.search.value");
+
+                // Terapkan filter pencarian jika ada nilai untuk kolom tersebut
+                if (!empty($columnSearchValue)) {
+                    $query->where(DB::raw("LOWER($column)"), 'like', "%{$columnSearchValue}%");
+                }
+            }
+
             // group by
             if (!empty($groupBy)) {
                 $query->groupBy($groupBy);

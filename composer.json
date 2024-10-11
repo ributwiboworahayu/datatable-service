@@ -3,7 +3,7 @@
   "description": "A service for integrating DataTables with Laravel.",
   "license": "MIT",
   "require": {
-    "php": "^7.4|^8.0|^8.1|^8.2",
+    "php": "^8.0|^8.1|^8.2",
     "illuminate/http": "^10.0||^11.0"
   },
   "require-dev": {
